@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RPL Zone</title>
+  <style>
+  /* CSS untuk tampilan */
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(45deg, #FFA500, #FFFF00);
+    }
+
+    /* CSS for the header section */
+    #header {
+      background-color: #f2f2f2;
+      padding: 20px;
+      text-align: center;
+      background: linear-gradient(45deg, #FFA500, #FFFF00);
+      color: #ffffff;
+    }
+
+    #header h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    #header p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    #logo {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+
+    /* CSS for the content section */
+    #content {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    #content h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    #content p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    /* CSS for the menu section */
+    #menu {
+      margin-top: 20px;
+    }
+
+    #menu h2 {
+      margin-top: 40px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    /* CSS for the food items */
+    .food-item {
+      width: 200px;
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: #f2f2f2;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .food-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .food-item img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+
+    .food-item h3 {
+      margin: 0;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .food-item p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .order-button {
+      background-color: #FFA500;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .order-button:hover {
+      background-color: #FF8C00;
+      transform: scale(1.1);
+    }
+#contact-info {
+  text-align: center;
+  margin-top: 100px;
+}
+
+#contact-info h2 {
+  margin-bottom: 20px;
+}
+
+#contact-info p {
+  margin: 10px 0;
+}
+
+    /* CSS for animations */
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .animated {
+      animation: fadeIn 1s;
+    }
+
+
+/* CSS untuk smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+.food-item img:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.food-item {
+  width: 200px;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 10px; /* Menambahkan border-radius */
+}
+
+#error-message {
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animated {
+  animation: fadeIn 1s;
+}
+
+#header {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(45deg, #FFA500, #FFFF00);
+  color: #ffffff;
+}
+
+#header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+#header p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#menu {
+  margin-top: 20px;
+}
+
+.food-item {
+    width: 200px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+.food-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.food-item h3 {
+    margin: 0;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+.food-item p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+  .order-button {
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+
+.order-button:hover {
+  background-color: #FF8C00;
+  transform: scale(1.1);
+}
+
+  /* Tambahkan kode CSS di bawah ini untuk membedakan antara "Menu Original" dan "Menu Campuran/Mix" */
+  #menu h2 {
+    margin-top: 40px;
+  }
+
+  /* Styling untuk "Menu Original" */
+  #menu h2:nth-child(odd) {
+    background-color: #f2f2f2;
+    color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  /* Styling untuk "Menu Campuran/Mix" */
+  #menu h2:nth-child(even) {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+#menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.food-item {
+  flex: 0 0 calc(20% - 50px); /* Mengatur lebar item makanan menjadi 50% dari lebar kontainer, dikurangi 20px untuk margin */
+}
+
+#menu h2 {
+  width: 100%;
+}
+
+#menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center; /* Menambahkan ini untuk memusatkan semua konten */
+}
+
+#menu h2 {
+  display: inline-block; /* Mengubah ini dari width: 100% menjadi display: inline-block */
+  margin: 20px auto; /* Menambahkan ini untuk memberikan margin otomatis di sisi kiri dan kanan */
+}
+
+  </style>
+</head>
+<body>
+  <div id="header">
+    <h1>Pisang Nugget</h1>
+    <p>"Selamat datang di Pisang Nugget RPL, tempat Anda menemukan berbagai varian pisang nugget lezat dan kreatif untuk memanjakan lidah Anda."</p>
+    <img id="logo" src="logo.png" alt="Logo Pisang Nugget">
+  </div>
+  
+  <div id="content" class="animated">
+    <h2>Silahkan pesan sesuai keinginan Anda!</h2>
+    <p>Pilih dari beragam rasa eksotis dan klasik pisang nugget kami yang memikat, dari cokelat indulgent hingga tiramisu yang manisu.</p>
+  </div>
+  
+<!-- Code for the "produk" section -->
+<div id="menu">
+  <!-- Judul Menu Original -->
+  <h2>Menu Original</h2>
+  <div class="food-item">
+    <img src="coklat.jpeg" alt="Makanan 1">
+    <h3>Coklat</h3>
+    <p>Harga: Rp 5.000</p>
+    <button class="order-button">Pesan</button>
+  </div>
+  <div class="food-item">
+    <img src="matcha.jpeg" alt="Makanan 2">
+    <h3>Matcha</h3>
+    <p>Harga: Rp 5.000</p>
+    <button class="order-button">Pesan</button>
+  </div>
+  <div class="food-item">
+    <img src="stroberi.jpg" alt="Makanan 3">
+    <h3>Strawberry</h3>
+    <p>Harga: Rp 5.000</p>
+    <button class="order-button">Pesan</button>
+  </div>
+  <div class="food-item">
+    <img src="tiramisu.jpg" alt="Makanan 4">
+    <h3>Tiramisu</h3>
+    <p>Harga: Rp 5.000</p>
+    <button class="order-button">Pesan</button>
+  </div>
+  <!-- Judul Menu Campuran/Mix -->
+  <h2>Menu Campuran/Mix</h2>
+  <div class="food-item">
+    <img src="avocadovanila.jpg" alt="Makanan Mix 1">
+    <h3>Avocado x Vanilla</h3>
+    <p>Harga: Rp 7.000</p>
+    <button class="order-button">Pesan</button>
+  </div>
+  <div class="food-item">
+    <img src="coklatgreentea.jpg" alt="Makanan Mix 2">
+    <h3>Coklat x Greentea</h3>
+    <p>Harga: Rp 7.000</p>
+    <button class="order-button">Pesan</button>
+  </div>
+  <div class="food-item">
+    <img src="tarovanila.jpg" alt="Makanan Mix 3">
+    <h3>Taro x Vanilla</h3>
+    <p>Harga: Rp 7.000</p>
+    <button class="order-button">Pesan</button>
+  </div>
+  <div class="food-item">
+    <img src="greenteacheese.jpg" alt="Makanan Mix 4">
+    <h3>Greentea x Cheese</h3>
+    <p>Harga: Rp 7.000</p>
+    <button class="order-button">Pesan</button>
+  </div>
+  </div>
+  
+  <div id="contact-info">
+    <h2>Contact Person</h2>
+    <p>Nomor Telepon: +6283123801679</p>
+    <p>Alamat Toko: SMKN 1 Cibinong</p>
+  </div>
+  
+  <script>
+      // JavaScript untuk mengarahkan tombol "pesan" ke WhatsApp
+      const orderButtons = document.getElementsByClassName('order-button');
+
+for (let i = 0; i < orderButtons.length; i++) {
+  orderButtons[i].addEventListener('click', function() {
+    const phoneNumber = '+6283123801679'; // Ganti dengan nomor WhatsApp yang diinginkan
+    const message = 'Saya ingin memesan Pisang Nugget rasa ' + this.parentNode.getElementsByTagName('h3')[0].innerText; // Mengambil nama makanan dari elemen terkait
+
+    const whatsappLink = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURIComponent(message);
+    window.open(whatsappLink);
+  });
+}
+  
+  </script>
+  </body>
+  </html>
